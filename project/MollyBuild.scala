@@ -50,11 +50,12 @@ object MollyBuild extends Build {
         "org.codehaus.jackson" % "jackson-mapper-asl" % "1.9.13",
         "com.github.tototoshi" %% "scala-csv" % "1.0.0",
         "com.lihaoyi" %% "pprint" % "0.3.6",
-        "com.github.nikita-volkov" % "sext" % "0.2.4",
-        "com.github.vagm" %% "optimus" % "1.2.1"
+        "com.github.nikita-volkov" % "sext" % "0.2.4"//,
+        //"com.github.vagm" %% "optimus" % "1.2.1"
       )
     )
-  ).dependsOn(scalaZ3)
+  ).dependsOn(scalaZ3).dependsOn(optimus)
 
   lazy val scalaZ3 = RootProject(uri("git://github.com/JoshRosen/ScalaZ3.git#7c3d7801c7b312433f06101414aeb3a7f9f30433"))
+  lazy val optimus = RootProject(uri("git://github.com/vagm/Optimus.git#01b38b696ad7f70a5855c1a994bbbee63173dce3"))
 }
