@@ -6,6 +6,8 @@ Molly is written in Scala and compiled using SBT.  Molly depends on the [C4 Over
 
 The top-level `Makefile` should be handle a one-click build on OS X.
 
+###El Capitan update:
+El capitan seems to completely ignore `LD_LIBRARY_PATH`. Copy the c4 and z3 dylib files into `/usr/local/lib` after running the makefile so that os x finds them.
 
 ## Running
 
